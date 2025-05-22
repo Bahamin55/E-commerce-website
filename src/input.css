@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "inter_regular";
+    src: url(./fonts/Inter_18pt-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "inter_bold";
+    src: url(./fonts/Inter_18pt-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "poppins_bold";
+    src: url(./fonts/Poppins-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "poppins_regular";
+    src: url(./fonts/Poppins-Regular.ttf) format("truetype");
+  }
+}

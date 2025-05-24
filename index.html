@@ -12,6 +12,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Css -->
     <link rel="stylesheet" href="./src/output.css" />
   </head>
@@ -129,107 +134,519 @@
     </div>
     <!--end of header  -->
     <!-- sales -->
-    <section>
-      <div class="container mt-28">
-        <div class="sales-header">
-          <div class="sales-tag flex items-center">
-            <div class="w-5 h-10 bg-red-600 rounded-sm"></div>
-            <p class="ml-4 text-red-600 font-poppins_Bold text-[16px]">
-              Today’s
-            </p>
-          </div>
-          <div class="sales-title mt-4 flex items-end gap-x-52">
-            <p class="text-4xl font-bold">Flash Sales</p>
-            <!-- countdown -->
-            <div class="countdown flex">
-              <div class="flex items-center">
-                <div>
-                  <p class="font-poppins_Regular">Days</p>
-                  <p id="days" class="text-4xl font-bold">03</p>
-                </div>
-                <p class="text-red-600 text-3xl font-bold ml-4 mt-5">:</p>
-              </div>
-              <div class="flex items-center ml-4">
-                <div>
-                  <p class="font-poppins_Regular">Hours</p>
-                  <p id="hours" class="text-4xl font-bold">23</p>
-                </div>
-                <p class="text-red-600 text-3xl font-bold ml-4 mt-5">:</p>
-              </div>
-              <div class="flex items-center ml-4">
-                <div>
-                  <p class="font-poppins_Regular">Minutes</p>
-                  <p id="minutes" class="text-4xl font-bold">19</p>
-                </div>
-                <p class="text-red-600 text-3xl font-bold ml-4 mt-5">:</p>
-              </div>
-              <div class="flex items-center ml-4">
-                <div>
-                  <p class="font-poppins_Regular">Seconds</p>
-                  <p id="seconds" class="text-4xl font-bold">56</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="container mt-28">
+      <div class="sales-header">
+        <div class="sales-tag flex items-center">
+          <div class="w-5 h-10 bg-red-600 rounded-sm"></div>
+          <p class="ml-4 text-red-600 font-poppins_Bold text-[16px]">Today’s</p>
         </div>
-        <!-- sales-product -->
-        <div class="grid grid-cols-4 gap-6 mt-10">
-          <!-- card -->
-          <div class="card relative">
-            <div
-              class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-            >
-              <img
-                src="./src/img/items/item-1.png"
-                alt=""
-                class="p-16 hover:scale-110 transition duration-300"
-              />
-              <a
-                href="#"
-                class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                >Add to cart</a
-              >
-            </div>
-            <!-- card-icons -->
-            <div class="labels w-full px-4 flex justify-between absolute top-4">
-              <p
-                class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
-              >
-                -40%
-              </p>
-              <div class="icons">
-                <div
-                  class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-                >
-                  <i class="ri-heart-line text-2xl p-2"></i>
-                </div>
-                <div
-                  class="eye bg-white text-black rounded-full flex items-center justify-center"
-                >
-                  <i class="ri-eye-line text-3xl p-2"></i>
-                </div>
+        <div class="sales-title mt-4 flex items-end gap-x-52">
+          <p class="text-4xl font-bold">Flash Sales</p>
+          <!-- countdown -->
+          <div class="countdown flex">
+            <div class="flex items-center">
+              <div>
+                <p class="font-poppins_Regular">Days</p>
+                <p id="days" class="text-4xl font-bold">03</p>
               </div>
+              <p class="text-red-600 text-3xl font-bold ml-4 mt-5">:</p>
             </div>
-            <!-- card footer -->
-            <div class="card-footer mt-5 text-[16px] font-semibold">
-              <p>HAVIT HV-G92 Gamepad</p>
-              <div class="price flex my-3 gap-x-4">
-                <p class="text-red-600">$120</p>
-                <p class="line-through text-gray-400">$160</p>
+            <div class="flex items-center ml-4">
+              <div>
+                <p class="font-poppins_Regular">Hours</p>
+                <p id="hours" class="text-4xl font-bold">23</p>
               </div>
-              <div class="star flex gap-x-2">
-                <i class="ri-star-fill text-orange-400"></i>
-                <i class="ri-star-fill text-orange-400"></i>
-                <i class="ri-star-fill text-orange-400"></i>
-                <i class="ri-star-fill text-orange-400"></i>
-                <i class="ri-star-fill text-orange-400"></i>
-                <p class="text-gray-500">(88)</p>
+              <p class="text-red-600 text-3xl font-bold ml-4 mt-5">:</p>
+            </div>
+            <div class="flex items-center ml-4">
+              <div>
+                <p class="font-poppins_Regular">Minutes</p>
+                <p id="minutes" class="text-4xl font-bold">19</p>
+              </div>
+              <p class="text-red-600 text-3xl font-bold ml-4 mt-5">:</p>
+            </div>
+            <div class="flex items-center ml-4">
+              <div>
+                <p class="font-poppins_Regular">Seconds</p>
+                <p id="seconds" class="text-4xl font-bold">56</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- sales-product -->
+      <div class="">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper mt-10">
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item-1.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item-1.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item3.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item4.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item-1.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item-1.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <!-- card -->
+              <div class="card relative">
+                <div
+                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
+                >
+                  <img
+                    src="./src/img/items/item-1.png"
+                    alt=""
+                    class="p-16 hover:scale-110 transition duration-300"
+                  />
+                  <a
+                    href="#"
+                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >Add to cart</a
+                  >
+                </div>
+                <!-- card-icons -->
+                <div
+                  class="labels w-full px-4 flex justify-between absolute top-4"
+                >
+                  <p
+                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                  >
+                    -40%
+                  </p>
+                  <div class="icons">
+                    <div
+                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    >
+                      <i class="ri-heart-line text-2xl p-2"></i>
+                    </div>
+                    <div
+                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                    >
+                      <i class="ri-eye-line text-3xl p-2"></i>
+                    </div>
+                  </div>
+                </div>
+                <!-- card footer -->
+                <div class="card-footer mt-5 text-[16px] font-semibold">
+                  <p>HAVIT HV-G92 Gamepad</p>
+                  <div class="price flex my-3 gap-x-4">
+                    <p class="text-red-600">$120</p>
+                    <p class="line-through text-gray-400">$160</p>
+                  </div>
+                  <div class="star flex gap-x-2">
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <i class="ri-star-fill text-orange-400"></i>
+                    <p class="text-gray-500">(88)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 flex items-center justify-center">
+          <button href="#" class="bg-red-500 px-8 py-4 text-white rounded">
+            View All Products
+          </button>
+        </div>
+      </div>
     </section>
+    <!-- border -->
+    <section class="container">
+      <div class="border border-gray-200 mt-16"></div>
+    </section>
+    <!-- categories -->
+    <section class="container mt-28">
+      <div class="sales-tag flex items-center">
+        <div class="w-5 h-10 bg-red-600 rounded-sm"></div>
+        <p class="ml-4 text-red-600 font-poppins_Bold text-[16px]">
+          Categories
+        </p>
+      </div>
+      <p class="text-[36px] font-bold mt-8">Browse By Category</p>
+
+      <div class="cards mt-12 grid grid-cols-6">
+        <div
+          class="card w-[170px] h-[145px] border-2 border-gray-300 flex flex-col items-center justify-center rounded hover:bg-red-500 hover:text-white"
+        >
+          <i class="ri-smartphone-line text-[48px]"></i>
+          <p class="text-[16px] font-poppins_Regular">Phones</p>
+        </div>
+        <div
+          class="card w-[170px] h-[145px] border-2 border-gray-300 flex flex-col items-center justify-center rounded hover:bg-red-500 hover:text-white"
+        >
+          <i class="ri-computer-line text-[48px]"></i>
+          <p class="text-[16px] font-poppins_Regular">Computers</p>
+        </div>
+        <div
+          class="card w-[170px] h-[145px] border-2 border-gray-300 flex flex-col items-center justify-center rounded hover:bg-red-500 hover:text-white"
+        >
+          <i class="ri-attachment-line text-[48px]"></i>
+          <p class="text-[16px] font-poppins_Regular">SmartWatch</p>
+        </div>
+        <div
+          class="card w-[170px] h-[145px] border-2 border-gray-300 flex flex-col items-center justify-center rounded hover:bg-red-500 hover:text-white"
+        >
+          <i class="ri-camera-line text-[48px]"></i>
+          <p class="text-[16px] font-poppins_Regular">Camera</p>
+        </div>
+        <div
+          class="card w-[170px] h-[145px] border-2 border-gray-300 flex flex-col items-center justify-center rounded hover:bg-red-500 hover:text-white"
+        >
+          <i class="ri-customer-service-line text-[48px]"></i>
+          <p class="text-[16px] font-poppins_Regular">HeadPhones</p>
+        </div>
+        <div
+          class="card w-[170px] h-[145px] border-2 border-gray-300 flex flex-col items-center justify-center rounded hover:bg-red-500 hover:text-white"
+        >
+          <i class="ri-gamepad-line text-[48px]"></i>
+          <p class="text-[16px] font-poppins_Regular">Gaming</p>
+        </div>
+      </div>
+    </section>
+    <!-- border -->
+    <section class="container">
+      <div class="border border-gray-200 mt-16"></div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- js -->
     <script src="./js/index.js"></script>
   </body>

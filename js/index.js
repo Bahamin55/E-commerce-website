@@ -33,3 +33,18 @@ var x = setInterval(function () {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+//  Initialize Swiper
+ var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+       autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      spaceBetween: 30,
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });

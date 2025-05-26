@@ -1,4 +1,4 @@
-// select time element
+// select timer element
 const day = document.getElementById("days");
 const hour = document.getElementById("hours");
 const minute = document.getElementById("minutes");
@@ -35,16 +35,25 @@ var x = setInterval(function () {
 }, 1000);
 
 //  Initialize Swiper
- var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-       autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      spaceBetween: 30,
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 4,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  spaceBetween: 30,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+// arrow up btn
+const arrowBtn = document.getElementById("arrow-up");
+arrowBtn.addEventListener("click", () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
+});

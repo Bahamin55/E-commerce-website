@@ -12,6 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- Css -->
     <link rel="stylesheet" href="../src/output.css" />
   </head>
@@ -28,16 +29,18 @@
       </div>
     </div>
     <!-- nav footer -->
-    <div class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10">
+    <div
+      class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10"
+    >
       <div
         class="container w-full h-full mx-auto flex items-center justify-between"
       >
-        <a href="#" class="logo text-[24px] font-inter_Bold ">Exclusive</a>
+        <a href="#" class="logo text-[24px] font-inter_Bold">Exclusive</a>
         <div class="list">
-          <a href="../index.html" class="link mr-7 ">Home</a>
+          <a href="../index.html" class="link mr-7">Home</a>
           <a href="./contact.html" class="link mr-7">Contact</a>
-          <a href="./about.html" class="link mr-7">About</a>
-          <a href="./signup.html" class="link underline">Sign Up</a>
+          <a href="./about.html" class="link mr-7 underline">About</a>
+          <a href="./signup.html" class="link">Sign Up</a>
         </div>
         <div class="user flex items-center gap-3">
           <div
@@ -55,46 +58,7 @@
         </div>
       </div>
     </div>
-    <!--end of header  -->
-    <section class="container">
-      <div
-        class="flex items-center justify-between mt-20 -translate-x-20 max-w-[1280px]"
-      >
-        <div>
-          <img src="../src/img/auth-image.png" alt="" />
-        </div>
-        <div class="flex flex-col">
-          <p class="text-[36px]">Create an account</p>
-          <p class="text-[16px] font-poppins_Regular my-4">
-            Enter your details below
-          </p>
-          <input
-            type="text"
-            placeholder="Name"
-            class="py-3 text-[16px] outline-none border-b border-gray-500"
-          />
-          <input
-            type="email"
-            placeholder="Email or Phone Number"
-            class="py-3 my-4 text-[16px] outline-none border-b border-gray-500"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            class="py-3 mb-3 text-[16px] outline-none border-b border-gray-500"
-          />
-          <button
-            class="bg-red-500 text-white text-[16px] font-poppins_Regular py-4 rounded my-4"
-          >
-            Create Account
-          </button>
-          <p class="font-poppins_Regular text-[16px]">
-            Already have account?
-            <a href="./login.html" class="underline ml-3">Log in</a>
-          </p>
-        </div>
-      </div>
-    </section>
+
     <!-- footer -->
     <footer class="bg-black text-white mt-32">
       <div class="flex justify-around py-20 border-b border-gray-700">
@@ -164,8 +128,5 @@
         </p>
       </div>
     </footer>
-
-    <!-- js -->
-    <script src="../js/index.js"></script>
   </body>
 </html>

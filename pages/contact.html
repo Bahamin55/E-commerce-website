@@ -28,16 +28,18 @@
       </div>
     </div>
     <!-- nav footer -->
-    <div class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10">
+    <div
+      class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10"
+    >
       <div
         class="container w-full h-full mx-auto flex items-center justify-between"
       >
-        <a href="#" class="logo text-[24px] font-inter_Bold ">Exclusive</a>
+        <a href="#" class="logo text-[24px] font-inter_Bold">Exclusive</a>
         <div class="list">
-          <a href="../index.html" class="link mr-7 ">Home</a>
-          <a href="./contact.html" class="link mr-7">Contact</a>
+          <a href="../index.html" class="link mr-7">Home</a>
+          <a href="./contact.html" class="link mr-7 underline">Contact</a>
           <a href="./about.html" class="link mr-7">About</a>
-          <a href="./signup.html" class="link underline">Sign Up</a>
+          <a href="./signup.html" class="link">Sign Up</a>
         </div>
         <div class="user flex items-center gap-3">
           <div
@@ -50,51 +52,73 @@
             />
             <i class="ri-search-line text-xl"></i>
           </div>
-          <i class="ri-heart-line text-xl cursor-pointer"></i>
-          <i class="ri-shopping-cart-2-line text-xl cursor-pointer"></i>
+          <i class="ri-heart-line text-2xl cursor-pointer"></i>
+          <i class="ri-shopping-cart-2-line text-2xl cursor-pointer"></i>
         </div>
       </div>
     </div>
-    <!--end of header  -->
+
     <section class="container">
-      <div
-        class="flex items-center justify-between mt-20 -translate-x-20 max-w-[1280px]"
-      >
-        <div>
-          <img src="../src/img/auth-image.png" alt="" />
+      <div class="mt-48 flex gap-x-8 font-poppins_Regular">
+        <div class="w-1/4 shadow-lg rounded p-8">
+          <div class="border-b-2 border-gray-300">
+            <div class="flex items-center mb-6">
+              <img src="../src/img/icons/icons-phone.png" alt="" />
+              <p class="ml-4 text-[16px]">Call To Us</p>
+            </div>
+            <p class="text-[14px] mb-6">
+              We are available 24/7, 7 days a week.
+            </p>
+            <p class="text-[14px] mb-6">Phone: +8801611112222</p>
+          </div>
+          <div class="w-[340px] mt-6">
+            <div class="flex items-center mb-6">
+              <img src="../src/img/icons/icons-mail.png" alt="" />
+              <p class="ml-4 text-[16px]">Write To US</p>
+            </div>
+            <p class="text-[14px] mb-6">
+              Fill out our form and we will contact <br />
+              you within 24 hours.
+            </p>
+            <p class="text-[14px] mb-6">Emails: customer@exclusive.com</p>
+            <p class="text-[14px] mb-6">Emails: support@exclusive.com</p>
+          </div>
         </div>
-        <div class="flex flex-col">
-          <p class="text-[36px]">Create an account</p>
-          <p class="text-[16px] font-poppins_Regular my-4">
-            Enter your details below
-          </p>
-          <input
-            type="text"
-            placeholder="Name"
-            class="py-3 text-[16px] outline-none border-b border-gray-500"
-          />
-          <input
-            type="email"
-            placeholder="Email or Phone Number"
-            class="py-3 my-4 text-[16px] outline-none border-b border-gray-500"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            class="py-3 mb-3 text-[16px] outline-none border-b border-gray-500"
-          />
-          <button
-            class="bg-red-500 text-white text-[16px] font-poppins_Regular py-4 rounded my-4"
-          >
-            Create Account
-          </button>
-          <p class="font-poppins_Regular text-[16px]">
-            Already have account?
-            <a href="./login.html" class="underline ml-3">Log in</a>
-          </p>
+        <div class="w-3/4 shadow-lg rounded p-10 flex flex-col justify-between">
+          <div class="flex justify-between gap-x-6">
+            <input
+              type="text"
+              placeholder="Your Name *"
+              class="bg-gray-100 px-5 py-3 w-full outline-none rounded"
+            />
+            <input
+              type="email"
+              placeholder="Your Email *"
+              class="bg-gray-100 px-5 py-3 w-full outline-none rounded"
+            />
+            <input
+              type="tel"
+              placeholder="Your Phone *"
+              class="bg-gray-100 px-5 py-3 w-full outline-none rounded"
+            />
+          </div>
+          <textarea
+            name=""
+            id=""
+            placeholder="Your Message"
+            class="w-full h-[230px] rounded bg-gray-100 resize-none outline-none px-5 pt-3"
+          ></textarea>
+          <div>
+            <button
+              class="bg-red-500 px-10 py-4 text-white rounded float-right"
+            >
+              Send Message
+            </button>
+          </div>
         </div>
       </div>
     </section>
+
     <!-- footer -->
     <footer class="bg-black text-white mt-32">
       <div class="flex justify-around py-20 border-b border-gray-700">
@@ -164,8 +188,5 @@
         </p>
       </div>
     </footer>
-
-    <!-- js -->
-    <script src="../js/index.js"></script>
   </body>
 </html>

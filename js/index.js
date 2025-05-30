@@ -57,3 +57,25 @@ arrowBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// cart tab
+const cartIcon = document.getElementById("cart-icon");
+const cartTab = document.getElementById("cart-tab");
+
+let hideTimeout;
+
+function showCart() {
+  clearTimeout(hideTimeout);
+  cartTab.classList.remove("hidden");
+}
+
+function hideCart() {
+  hideTimeout = setTimeout(() => {
+    cartTab.classList.add("hidden");
+  }, 200);
+}
+
+cartIcon.addEventListener("mouseenter", showCart);
+cartIcon.addEventListener("mouseleave", hideCart);
+cartTab.addEventListener("mouseenter", showCart);
+cartTab.addEventListener("mouseleave", hideCart);

@@ -145,7 +145,7 @@ const renderProducts = (targetElement, products, limit = null) => {
       let newProduct = document.createElement("div");
       newProduct.dataset.id = product.id;
       newProduct.innerHTML = `
-      <a href="../pages/product.html?id=${product.id}" class="item-box">
+      <a href="../pages/products.html?id=${product.id}" class="item-box">
          <div class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative">
           <img
             src="${product.image}"

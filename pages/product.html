@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Remix icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="product-detail">
+    <!-- nav top -->
+    <div
+      class="nav-top w-full h-10 text-white bg-black flex items-center justify-center fixed top-0 right-0 z-10"
+    >
+      <div class="flex text-[14px]">
+        <p class="font-poppins_Regular">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        </p>
+        <p class="font-poppins_Bold ml-5 underline">ShopNow</p>
+      </div>
+    </div>
+    <!-- nav footer -->
+    <div
+      class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10"
+    >
+      <div
+        class="container w-full h-full mx-auto flex items-center justify-between"
+      >
+        <a href="../index.html" class="logo text-[24px] font-inter_Bold"
+          >Exclusive</a
+        >
+        <div class="list">
+          <a href="../index.html" class="link mr-7">Home</a>
+          <a href="./contact.html" class="link mr-7">Contact</a>
+          <a href="./about.html" class="link mr-7">About</a>
+          <a href="./signup.html" class="link">Sign Up</a>
+        </div>
+        <div class="user flex items-center gap-3">
+          <div
+            class="search bg-gray-100 py-2 w-[240px] rounded mr-2 flex justify-around"
+          >
+            <input
+              type="text"
+              class="search outline-none border-none bg-gray-100"
+              placeholder="What are you looking for?"
+            />
+            <i class="ri-search-line text-xl"></i>
+          </div>
+          <i class="ri-heart-line text-2xl cursor-pointer"></i>
+          <!-- cartIcon -->
+          <div id="cart-icon" class="relative">
+            <a href="./cart.html">
+              <i
+                class="ri-shopping-cart-2-line text-2xl cursor-pointer hover:bg-orange-200 p-2 rounded"
+              ></i>
+              <span
+                class="absolute -top-3 -right-1 bg-red-300 px-2 py-0 rounded-full"
+                ></span
+              >
+            </a>
+            <!-- cartTab -->
+            <div
+              id="cart-tab"
+              class="bg-white text-black shadow-lg w-[400px] h-[80vh] absolute top-[27px] right-[8px] rounded-md flex flex-col justify-between hidden"
+            >
+              <h2 class="text-[20px] font-bold m-4">Shopping cart</h2>
+              <div class="list-cart">
+                <!-- products show here -->
+              </div>
+              <div class="btn w-full">
+                <button
+                  class="float-right px-14 py-6 m-3 rounded-md bg-orange-400"
+                >
+                  Check Out
+                </button>
+              </div>
+            </div>
+          </div>
+          <i class="ri-user-3-line text-2xl cursor-pointer"></i>
+        </div>
+      </div>
+    </div>
+    <!-- product detail -->
+    <section class="container">
+      <div class="mt-[180px] flex gap-16">
+        <!-- product image -->
+        <div class="product-img w-3/5 flex h-[600px] gap-6">
+          <div class="thumbnail-list w-1/5 flex flex-col justify-between">
+            <!-- <img src="" class="cursor-pointer bg-gray-100 p-3 rounded" />
+            <img src="" class="cursor-pointer bg-gray-100 p-3 rounded" />
+            <img src="" class="cursor-pointer bg-gray-100 p-3 rounded" />
+            <img src="" class="cursor-pointer bg-gray-100 p-3 rounded" /> -->
+          </div>
+          <div
+            class="w-4/5 bg-gray-100 rounded flex justify-center items-center"
+          >
+            <div
+              class="main-img w-full aspect-square flex justify-center items-center"
+            >
+              <img src="" />
+            </div>
+          </div>
+        </div>
+        <!-- product info -->
+        <div
+          class="product-info w-[400px] h-[600px] flex flex-col justify-between"
+        >
+          <!-- sec1 -->
+          <h2 class="title font-semibold text-[24px]"></h2>
+          <div class="flex my-3">
+            <div class="star flex gap-x-2 border-r border-gray-500 pr-3">
+              <i class="ri-star-fill text-orange-400"></i>
+              <i class="ri-star-fill text-orange-400"></i>
+              <i class="ri-star-fill text-orange-400"></i>
+              <i class="ri-star-fill text-orange-400"></i>
+              <i class="ri-star-fill text-gray-400"></i>
+              <p class="text-gray-500">(150 Reviews)</p>
+            </div>
+            <p class="text-green-500 ml-3">In Stock</p>
+          </div>
+          <p class="price text-[24px]">$</p>
+          <p class="desc text-[14px] my-3 pb-3"></p>
+          <div class="border-b-2 border-gray-500"></div>
+          <!-- sec2 -->
+          <div class="color-section flex items-center my-3">
+            <p class="text-[20px] mr-4">Colours:</p>
+            <div class="color-options flex gap-3">
+              <button class="w-5 h-5 bg-blue-500 rounded-full"></button>
+              <button class="selected w-5 h-5 bg-red-500 rounded-full"></button>
+            </div>
+          </div>
+          <div class="size-section flex items-center my-4">
+            <p class="text-[20px] mr-6">Size:</p>
+            <div class="size-options flex gap-3">
+              <button class="border border-gray-400 w-10 h-10 rounded">
+                S
+              </button>
+              <button class="border border-gray-400 w-10 h-10 rounded">
+                M
+              </button>
+              <button class="selected border border-gray-400 w-10 h-10 rounded">
+                L
+              </button>
+              <button class="border border-gray-400 w-10 h-10 rounded">
+                XL
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 mt-6">
+            <div class="flex items-center border border-gray-400 rounded">
+              <button class="border-r border-gray-400 text-3xl w-10">-</button>
+              <p class="text-2xl px-7">2</p>
+              <button
+                class="bg-red-500 text-white border-l border-gray-400 text-3xl w-10"
+              >
+                +
+              </button>
+            </div>
+            <button class="buy-now bg-red-500 rounded px-11 py-2 text-white">
+              Buy Now
+            </button>
+            <button
+              class="text-[16px] w-10 h-10 border border-gray-400 text-center rounded"
+            >
+              <i class="ri-heart-3-line"></i>
+            </button>
+          </div>
+          <!-- delivery -->
+          <div
+            class="font-poppins_Regular border border-gray-400 mt-10 rounded"
+          >
+            <div class="flex items-center p-5 border-b border-gray-400">
+              <div class="text-[30px]"><i class="ri-truck-line"></i></div>
+              <div class="ml-5">
+                <p class="text-[16px]">Free Delivery</p>
+                <p class="text-[12px] underline">
+                  Enter your postal code for Delivery Availability
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center p-5">
+              <div class="text-[30px]"><i class="ri-text-wrap"></i></div>
+              <div class="ml-5">
+                <p class="text-[16px]">Return Delivery</p>
+                <p class="text-[12px]">
+                  Free 30 Days Delivery Returns. Details
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-black text-white mt-32">
+      <div class="flex justify-around py-20 border-b border-gray-700">
+        <div>
+          <p class="text-[24px] font-inter_Regular">Exclusive</p>
+          <p class="text-[20px] my-4">Subscribe</p>
+          <p class="text-[16px]">Get 10% off your first order</p>
+          <div class="relative mt-4">
+            <span
+              class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500"
+            >
+              <i class="ri-send-plane-2-line"></i>
+            </span>
+            <input
+              type="email"
+              placeholder="Enter Your Mail"
+              class="pl-3 py-2 border-2 border-gray-500 bg-transparent rounded-lg focus:outline-none w-full"
+            />
+          </div>
+        </div>
+        <div>
+          <p class="text-[20px]">Support</p>
+          <p class="text-[16px] my-4">Stockholm sweden</p>
+          <p class="text-[16px] mb-4">exclusive@gmail.com</p>
+          <p class="text-[16px]">+88015-88888-9999</p>
+        </div>
+        <div>
+          <p class="text-[20px]">Account</p>
+          <p class="text-[16px] my-4">My Account</p>
+          <p class="text-[16px]">Login / Register</p>
+          <p class="text-[16px] my-4">Cart</p>
+          <p class="text-[16px]">Wishlist</p>
+          <p class="text-[16px] mt-4">Shop</p>
+        </div>
+        <div>
+          <p class="text-[20px]">Quick Link</p>
+          <p class="text-[16px] my-4">Privacy Policy</p>
+          <p class="text-[16px]">Terms Of Use</p>
+          <p class="text-[16px] my-4">FAQ</p>
+          <p class="text-[16px]">Contact</p>
+        </div>
+        <div>
+          <p class="text-[20px] mb-4">Download App</p>
+          <p class="text-[12px]">Save $3 with App New User Only</p>
+          <div class="grid grid-cols-2 gap-x-0 mt-3 -translate-x-5">
+            <img
+              src="../src/img/Qr Code.png"
+              alt=""
+              class="row-span-2 justify-self-center"
+            />
+            <img src="../src/img/GooglePlay.png" alt="" />
+            <img src="../src/img/AppStore.png" alt="" />
+          </div>
+          <div class="mt-4 flex items-center justify-around">
+            <i class="ri-facebook-line text-[20px]"></i>
+            <i class="ri-twitter-line text-[20px]"></i>
+            <i class="ri-instagram-line text-[20px]"></i>
+            <i class="ri-linkedin-line text-[20px]"></i>
+          </div>
+        </div>
+      </div>
+      <!-- copy right -->
+      <div class="text-center">
+        <p class="text-gray-500 py-2">
+          <span class="text-[14px] mr-2">&#169;</span>Copyright Rimel 2022. All
+          right reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- js -->
+    <script src="../js/index.js"></script>
+  </body>
+</html>

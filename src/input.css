@@ -34,4 +34,18 @@
       justify-content: center;
       align-items: center;
     }
-   
+
+    /* product.html */
+    /* color and size select style */
+    .color-options {
+        button.selected{
+            border: 2px solid black;
+            scale: 1.4;
+        }
+    }
+    .size-options {
+        button.selected{
+            background-color: rgb(255, 68, 68);
+            color: white;
+        }
+    }

@@ -20,7 +20,7 @@
     <!-- Css -->
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body>
+  <body class="home-page">
     <!-- nav top -->
     <div
       class="nav-top w-full h-10 text-white bg-black flex items-center justify-center fixed top-0 right-0 z-10"
@@ -39,7 +39,9 @@
       <div
         class="container w-full h-full mx-auto flex items-center justify-between"
       >
-        <a href="#" class="logo text-[24px] font-inter_Bold">Exclusive</a>
+        <a href="./index.html" class="logo text-[24px] font-inter_Bold"
+          >Exclusive</a
+        >
         <div class="list">
           <a href="./index.html" class="link mr-7 underline">Home</a>
           <a href="./pages/contact.html" class="link mr-7">Contact</a>
@@ -58,20 +60,26 @@
             <i class="ri-search-line text-xl"></i>
           </div>
           <i class="ri-heart-line text-2xl cursor-pointer"></i>
-          <!-- cart tab -->
+          <!-- cartIcon -->
           <div id="cart-icon" class="relative">
-            <i
-              class="ri-shopping-cart-2-line text-2xl cursor-pointer hover:bg-orange-200 p-2 rounded"
-            ></i>
-            <span
-              class="absolute -top-3 -right-1 bg-red-300 px-2 py-0 rounded-full"
-              >0</span
-            >
+            <a href="./pages/cart.html">
+              <i
+                class="ri-shopping-cart-2-line text-2xl cursor-pointer hover:bg-orange-200 p-2 rounded"
+              ></i>
+              <span
+                class="absolute -top-3 -right-1 bg-red-300 px-2 py-0 rounded-full"
+                ></span
+              >
+            </a>
+            <!-- cartTab -->
             <div
               id="cart-tab"
               class="bg-white text-black shadow-lg w-[400px] h-[80vh] absolute top-[27px] right-[8px] rounded-md flex flex-col justify-between hidden"
             >
               <h2 class="text-[20px] font-bold m-4">Shopping cart</h2>
+              <div class="list-cart">
+                <!-- products show here -->
+              </div>
               <div class="btn w-full">
                 <button
                   class="float-right px-14 py-6 m-3 rounded-md bg-orange-400"
@@ -206,402 +214,421 @@
           <div class="swiper-wrapper mt-10">
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item-1.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="product.html?id=${product.id}">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                    <img
+                      src="./src/img/items/item-1.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div
+                    class="labels w-full px-4 flex justify-between absolute top-4"
                   >
-                    -40%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
+                      -40%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
                     </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
-                    >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item-1.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="cart.html">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                    <img
+                      src="./src/img/items/item-1.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div
+                    class="labels w-full px-4 flex justify-between absolute top-4"
                   >
-                    -32%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
+                      -32%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
                     </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
-                    >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item3.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="cart.html">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                    <img
+                      src="./src/img/items/item3.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div
+                    class="labels w-full px-4 flex justify-between absolute top-4"
                   >
-                    -40%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
+                      -40%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
                     </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
-                    >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item4.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="cart.html">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                    <img
+                      src="./src/img/items/item4.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div
+                    class="labels w-full px-4 flex justify-between absolute top-4"
                   >
-                    -40%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
+                      -40%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
                     </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
-                    >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item-1.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="cart.html">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                    <img
+                      src="./src/img/items/item-1.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div
+                    class="labels w-full px-4 flex justify-between absolute top-4"
                   >
-                    -40%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
+                      -40%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
                     </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
-                    >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item-1.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="cart.html">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
+                    <img
+                      src="./src/img/items/item-1.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div
+                    class="labels w-full px-4 flex justify-between absolute top-4"
                   >
-                    -40%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
+                      -40%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
                     </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
-                    >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
             <div class="swiper-slide">
               <!-- card -->
-              <div class="card relative">
-                <div
-                  class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-                >
-                  <img
-                    src="./src/img/items/item-1.png"
-                    alt=""
-                    class="p-16 hover:scale-110 transition duration-300"
-                  />
-                  <a
-                    href="#"
-                    class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-                    >Add to cart</a
+              <a href="cart.html">
+                <div class="card relative">
+                  <div
+                    class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
                   >
-                </div>
-                <!-- card-icons -->
-                <div
-                  class="labels w-full px-4 flex justify-between absolute top-4"
-                >
-                  <p
-                    class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
-                  >
-                    -40%
-                  </p>
-                  <div class="icons">
-                    <div
-                      class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                    <img
+                      src="./src/img/items/item-1.png"
+                      alt=""
+                      class="p-16 hover:scale-110 transition duration-300"
+                    />
+                    <button
+                      href="#"
+                      class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
                     >
-                      <i class="ri-heart-line text-2xl p-2"></i>
-                    </div>
-                    <div
-                      class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      Add to cart
+                    </button>
+                  </div>
+                  <!-- card-icons -->
+                  <div class="w-full px-4 flex justify-between absolute top-4">
+                    <p
+                      class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular"
                     >
-                      <i class="ri-eye-line text-3xl p-2"></i>
+                      -40%
+                    </p>
+                    <div class="icons">
+                      <div
+                        class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
+                      >
+                        <i class="ri-heart-line text-2xl p-2"></i>
+                      </div>
+                      <div
+                        class="eye bg-white text-black rounded-full flex items-center justify-center"
+                      >
+                        <i class="ri-eye-line text-3xl p-2"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card footer -->
+                  <div class="card-footer mt-5 text-[16px] font-semibold">
+                    <p>HAVIT HV-G92 Gamepad</p>
+                    <div class="price flex my-3 gap-x-4">
+                      <p class="text-red-600">$120</p>
+                      <p class="line-through text-gray-400">$160</p>
+                    </div>
+                    <div class="star flex gap-x-2">
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <i class="ri-star-fill text-orange-400"></i>
+                      <p class="text-gray-500">(88)</p>
                     </div>
                   </div>
                 </div>
-                <!-- card footer -->
-                <div class="card-footer mt-5 text-[16px] font-semibold">
-                  <p>HAVIT HV-G92 Gamepad</p>
-                  <div class="price flex my-3 gap-x-4">
-                    <p class="text-red-600">$120</p>
-                    <p class="line-through text-gray-400">$160</p>
-                  </div>
-                  <div class="star flex gap-x-2">
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <i class="ri-star-fill text-orange-400"></i>
-                    <p class="text-gray-500">(88)</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -684,198 +711,8 @@
         </button>
       </div>
       <!-- cards -->
-      <div class="grid grid-cols-4 gap-x-8 mt-8">
+      <div id="bestSelingCards" class="grid grid-cols-4 gap-x-8 mt-8">
         <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-5.png"
-              alt=""
-              class="p-12 hover:scale-110 transition duration-300 h-[288px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>Small BookSelf</p>
-            <div class="price flex my-3 gap-x-4">
-              <p class="text-red-600">$360</p>
-            </div>
-            <div class="star flex gap-x-2">
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(65)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-1.png"
-              alt=""
-              class="p-16 hover:scale-110 transition duration-300"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>HAVIT HV-G92 Gamepad</p>
-            <div class="price flex my-3 gap-x-4">
-              <p class="text-red-600">$410</p>
-              <p class="line-through text-gray-400">$450</p>
-            </div>
-            <div class="star flex gap-x-2">
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(88)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-7.png"
-              alt=""
-              class="p-16 hover:scale-110 transition duration-300"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>HAVIT HV-G92 Gamepad</p>
-            <div class="price flex my-3 gap-x-4">
-              <p class="text-red-600">$920</p>
-              <p class="line-through text-gray-400">$1160</p>
-            </div>
-            <div class="star flex gap-x-2">
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(88)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-6.png"
-              alt=""
-              class="p-16 hover:scale-110 transition duration-300"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>HAVIT HV-G92 Gamepad</p>
-            <div class="price flex my-3 gap-x-4">
-              <p class="text-red-600">$120</p>
-              <p class="line-through text-gray-400">$160</p>
-            </div>
-            <div class="star flex gap-x-2">
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(88)</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     <!-- banner -->
@@ -908,368 +745,8 @@
       </div>
       <p class="text-[36px] font-bold mt-8">Explore Our Products</p>
       <!-- cards -->
-      <div class="grid grid-cols-4 gap-x-8 gap-y-14 my-20">
+      <div id="OurProductCards" class="grid grid-cols-4 gap-x-8 gap-y-14 my-20">
         <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item3.png"
-              alt=""
-              class="p-12 hover:scale-110 transition duration-300 h-[288px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>Small BookSelf</p>
-            <div class="star flex gap-x-2 mt-3">
-              <p class="text-red-600">$360</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(65)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-6.png"
-              alt=""
-              class="p-16 hover:scale-110 transition duration-300"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>RGB liquid CPU Cooler</p>
-
-            <div class="star flex gap-x-2 mt-3">
-              <p class="text-red-600">$410</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <p class="text-gray-500">(88)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-14.png"
-              alt=""
-              class="p-16 hover:scale-110 transition duration-300 h-[290px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>ASUS FHD Gaming Laptop</p>
-            <div class="star flex gap-x-2 mt-3">
-              <p class="text-red-600">$920</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <p class="text-gray-500">(68)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-13.png"
-              alt=""
-              class="p-16 hover:scale-110 transition duration-300 h-[290px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>GP11 Shooter USB Gamepad</p>
-            <div class="star flex gap-x-2">
-              <p class="text-red-600">$120</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <p class="text-gray-500">(76)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-12.png"
-              alt=""
-              class="p-12 hover:scale-110 transition duration-300 h-[288px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>CANON EOS DSLR Camera</p>
-            <div class="star flex gap-x-2 mt-3">
-              <p class="text-red-600">$360</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(95)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-11.png"
-              alt=""
-              class="p-12 hover:scale-110 transition duration-300 h-[288px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>Jr. Zoom Soccer Cleats</p>
-            <div class="star flex gap-x-2 mt-3">
-              <p class="text-red-600">$470</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <p class="text-gray-500">(65)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex items-center flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-10.png"
-              alt=""
-              class="p-12 hover:scale-110 transition duration-300 w-[200px] h-[288px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>Breed Dry Dog Food</p>
-            <div class="star flex gap-x-2">
-              <p class="text-red-600">$120</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <p class="text-gray-500">(61)</p>
-            </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="card relative">
-          <div
-            class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative"
-          >
-            <img
-              src="./src/img/items/item-9.png"
-              alt=""
-              class="p-12 hover:scale-110 transition duration-300 h-[288px]"
-            />
-            <a
-              href="#"
-              class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
-              >Add to cart</a
-            >
-          </div>
-          <!-- card-icons -->
-          <div class="labels w-full px-4 flex justify-end absolute top-4">
-            <div class="icons">
-              <div
-                class="heart bg-white text-black rounded-full flex items-center justify-center mb-3"
-              >
-                <i class="ri-heart-line text-2xl p-2"></i>
-              </div>
-              <div
-                class="eye bg-white text-black rounded-full flex items-center justify-center"
-              >
-                <i class="ri-eye-line text-3xl p-2"></i>
-              </div>
-            </div>
-          </div>
-          <!-- card footer -->
-          <div class="card-footer mt-5 text-[16px] font-semibold">
-            <p>Kids Electric Car</p>
-            <div class="star flex gap-x-2">
-              <p class="text-red-600">$240</p>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-orange-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <i class="ri-star-fill text-gray-400"></i>
-              <p class="text-gray-500">(45)</p>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="flex items-center justify-center">
         <button href="#" class="bg-red-500 px-8 py-4 text-white rounded">

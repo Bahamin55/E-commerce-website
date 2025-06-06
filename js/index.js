@@ -145,7 +145,7 @@ const renderProducts = (targetElement, products, limit = null) => {
       let newProduct = document.createElement("div");
       newProduct.dataset.id = product.id;
       newProduct.innerHTML = `
-      <a href="../pages/products.html?id=${product.id}" class="item-box">
+      <a href="pages/products.html?id=${product.id}" class="item-box">
          <div class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative">
           <img
             src="${product.image}"
@@ -240,6 +240,7 @@ function displayProductDetail() {
 
   buyNowBtn.addEventListener("click", () => {
     addToCart(productData);
+    showSuccessAddCart();
   });
   updateCartBadge();
 }
@@ -335,6 +336,7 @@ function removeCartItem() {
       sessionStorage.setItem("cart", JSON.stringify(cart));
       displayCart();
       updateCartBadge();
+      showRemoveCartItem();
     });
   });
 }
@@ -367,3 +369,51 @@ function updateCartBadge() {
   }
 }
 updateCartBadge();
+
+// toastify
+
+function showSuccessAddCart() {
+  Toastify({
+    text: "Add To Cart",
+    duration: 3000,
+    destination: "../pages/cart.html",
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    offset: {
+      x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+      y: 80, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+    },
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      borderRadius: "10px",
+      fontSize: "16px",
+      padding: "15px 25px",
+    },
+  }).showToast();
+}
+
+function showRemoveCartItem() {
+  Toastify({
+    text: "Remove Item",
+    duration: 3000,
+    destination: "../pages/cart.html",
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    offset: {
+      x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+      y: 80, // vertical axis - can be a number or a string indicating unity. eg: '2em'
+    },
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #B43A4E, #FD1D1D)",
+      borderRadius: "10px",
+      fontSize: "16px",
+      padding: "15px 25px",
+    },
+  }).showToast();
+}

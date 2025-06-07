@@ -120,6 +120,7 @@ const fetchProducts = async () => {
     products = await response.json();
     renderProducts(selingCards, products, 4);
     renderProducts(productsCards, products, 8);
+    swiperRender();
   } catch (error) {
     console.log("error fetching products", error);
   }
@@ -416,4 +417,69 @@ function showRemoveCartItem() {
       padding: "15px 25px",
     },
   }).showToast();
+}
+
+// swiper product api
+
+const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+function swiperRender() {
+  swiperWrapper.innerHTML = "";
+
+  products.forEach((product) => {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
+
+    slide.innerHTML = `
+         <a href="pages/products.html?id=${product.id}" class="item-box h-[450px] w-[290px]">
+          <div class="card relative ">
+            <div class="bg-gray-200 rounded-md overflow-hidden flex flex-col group relative">
+              <img
+                src="${product.image}"
+                alt="${product.name}"
+                class="p-16 hover:scale-110 transition duration-300 h-[300px]"
+              />
+              <button
+                class="bg-black text-white py-3 text-center text-2xl absolute bottom-0 left-0 w-full opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition duration-300"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="labels w-full px-4 flex justify-between absolute top-4">
+              <p class="bg-red-600 text-white w-20 h-10 p-2 rounded-md flex items-center justify-center font-poppins_Regular">
+                ${product.rating.count}
+              </p>
+              <div class="icons">
+                <div class="heart bg-white text-black rounded-full flex items-center justify-center mb-3">
+                  <i class="ri-heart-line text-2xl p-2"></i>
+                </div>
+                <div class="eye bg-white text-black rounded-full flex items-center justify-center">
+                  <i class="ri-eye-line text-3xl p-2"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer mt-5 text-[16px] font-semibold">
+              <p class="truncate">${product.title}</p>
+              <div class=" my-3">
+                <p class="text-red-600">$${product.price}</p>
+              </div>
+              <div class="star flex gap-x-2">
+            <i class="ri-star-fill text-orange-400"></i>
+            <i class="ri-star-fill text-orange-400"></i>
+            <i class="ri-star-fill text-orange-400"></i>
+            <i class="ri-star-fill text-orange-400"></i>
+            <i class="ri-star-fill text-orange-400"></i>
+            <p class="text-gray-500">(${product.rating.rate})</p>
+          </div>
+            </div>
+          </div>
+        </a>
+    `;
+    swiperWrapper.appendChild(slide);
+
+    const itemBox = slide.querySelector(".item-box");
+      itemBox.addEventListener("click", () => {
+        sessionStorage.setItem("selectedProduct", JSON.stringify(product));
+      });
+  });
 }

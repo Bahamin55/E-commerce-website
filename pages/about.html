@@ -17,48 +17,62 @@
     <link rel="stylesheet" href="../src/output.css" />
   </head>
   <body>
-    <!-- nav top -->
-    <div
-      class="nav-top w-full h-10 text-white bg-black flex items-center justify-center fixed top-0 right-0 z-10"
-    >
-      <div class="flex text-[14px]">
-        <p class="font-poppins_Regular">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-        </p>
-        <p class="font-poppins_Bold ml-5 underline">ShopNow</p>
-      </div>
-    </div>
-    <!-- nav footer -->
-    <div
-      class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10"
-    >
-      <div
-        class="container w-full h-full mx-auto flex items-center justify-between"
-      >
-        <a href="#" class="logo text-[24px] font-inter_Bold">Exclusive</a>
-        <div class="list">
-          <a href="../index.html" class="link mr-7">Home</a>
-          <a href="./contact.html" class="link mr-7">Contact</a>
-          <a href="./about.html" class="link mr-7 underline">About</a>
-          <a href="./signup.html" class="link">Sign Up</a>
-        </div>
-        <div class="user flex items-center gap-3">
-          <div
-            class="search bg-gray-100 py-2 w-[240px] rounded mr-2 flex justify-around"
-          >
-            <input
-              type="text"
-              class="search outline-none border-none bg-gray-100"
-              placeholder="What are you looking for?"
-            />
-            <i class="ri-search-line text-xl"></i>
-          </div>
-          <i class="ri-heart-line text-xl cursor-pointer"></i>
-          <i class="ri-shopping-cart-2-line text-xl cursor-pointer"></i>
-        </div>
-      </div>
-    </div>
+   <!-- navbar -->
+     <nav>
+         <div
+           class="nav-top w-full h-10 text-white bg-black flex items-center justify-center fixed top-0 right-0 z-10"
+         >
+           <div class="flex text-[14px]">
+             <p class="font-poppins_Regular">
+               Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+             </p>
+             <p class="font-poppins_Bold ml-5 underline">ShopNow</p>
+           </div>
+         </div>
+         <div
+           class="nav w-full h-20 border-b border-gray-200 mt-5 fixed top-5 right-0 bg-white text-black z-10"
+         >
+           <div
+             class="container h-full mx-auto flex items-center justify-between"
+           >
+             <a href="../index.html" class="logo text-[24px] font-inter_Bold"
+               >Exclusive</a
+             >
+             <div class="list">
+               <a href="../index.html" class="link mr-7 ">Home</a>
+               <a href="./contact.html" class="link mr-7">Contact</a>
+               <a href="./about.html" class="link mr-7 underline">About</a>
+               <a href="./signup.html" class="link">Sign Up</a>
+             </div>
+             <div class="user flex items-center gap-3">
+               <div
+                 class="search bg-gray-100 py-2 w-[240px] rounded mr-2 flex justify-around"
+               >
+                 <input
+                   type="text"
+                   class="search outline-none border-none bg-gray-100"
+                   placeholder="What are you looking for?"
+                 />
+                 <i class="ri-search-line text-xl"></i>
+               </div>
+               <i class="ri-heart-line text-2xl cursor-pointer"></i>
+               <!-- cartIcon -->
+               <div id="cart-icon" class="relative">
+                 <a href="./cart.html">
+                   <i
+                     class="ri-shopping-cart-2-line text-2xl cursor-pointer hover:bg-orange-200 p-2 rounded"
+                   ></i>
+                   <span
+                     class="absolute -top-3 -right-1 bg-red-300 px-2 py-0 rounded-full"
+                   ></span>
+                 </a>
 
+               </div>
+               <i class="ri-user-3-line text-2xl cursor-pointer"></i>
+             </div>
+           </div>
+         </div>
+     </nav>
     <!-- footer -->
     <footer class="bg-black text-white mt-32">
       <div class="flex justify-around py-20 border-b border-gray-700">
